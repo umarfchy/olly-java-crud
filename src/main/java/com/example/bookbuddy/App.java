@@ -17,7 +17,7 @@ public class App {
 
       System.out.println("These are the available books");
       for (Book book: books){
-        System.out.println("ID: " + book.getId() + " Name: " + book.getName());
+        System.out.println("ID: " + book.getId() + " Name: " + book.getName() + " UUID: " + book.getUUID());
       }
     
     }
