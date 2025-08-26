@@ -1,3 +1,4 @@
+package com.example.bookbuddy;
 public class Book{
     private int id;
     private String name;
@@ -11,7 +12,7 @@ public class Book{
         return id;
     }
 
-    public int getName(){
+    public String getName(){
         return name;
     }
 }
