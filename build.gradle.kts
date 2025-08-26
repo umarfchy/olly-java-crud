@@ -4,3 +4,19 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our Samples at https://docs.gradle.org/9.0.0/samples
  */
+
+plugins {
+    java
+    application
+}
+
+java {
+
+    toolchain {
+        languageVersion.set(org.gradle.jvm.toolchain.JavaLanguageVersion.of(24))
+    }
+}
+
+application {
+    mainClass.set("com.example.bookbuddy.App")
+}
