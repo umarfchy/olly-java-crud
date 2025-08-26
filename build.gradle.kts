@@ -10,6 +10,10 @@ plugins {
     application
 }
 
+repositories {
+    mavenCentral()
+}
+
 java {
 
     toolchain {
@@ -21,6 +25,9 @@ application {
     mainClass.set("com.example.bookbuddy.App")
 }
 
+dependencies {
+    implementation("org.postgresql:postgresql:42.7.7")
+}
 
 tasks.jar {
     manifest {
