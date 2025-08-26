@@ -10,8 +10,8 @@ Each level introduces one new engineering concept, like stacking LEGO blocks.
 
 ### Level 0 — Core Domain & CRUD (Console)
 - Pure Java, no frameworks.
-- `Book` model with in-memory repository.
-- Console menu for CRUD operations.
+- Create a `Book` model.
+- Show get operations in console.
 
 ### Level 1 — Persistence with JDBC (H2)
 - Store books in an H2 database.
