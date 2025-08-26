@@ -8,7 +8,7 @@ public class App {
   public static void main(String[] args) {
 
     try (Connection conn = DBConnection.getConnection()) {
-      System.out.println(conn.getMetaData().toString());
+      System.out.println(conn.getClientInfo().toString());
       System.out.println("Connection successful;");
     } catch (Exception e) {
       System.err.println("Connection failed;");
