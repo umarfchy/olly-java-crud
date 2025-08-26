@@ -20,3 +20,10 @@ java {
 application {
     mainClass.set("com.example.bookbuddy.App")
 }
+
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = application.mainClass.get()
+    }
+}
