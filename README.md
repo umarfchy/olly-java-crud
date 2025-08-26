@@ -13,10 +13,9 @@ Each level introduces one new engineering concept, like stacking LEGO blocks.
 - Create a `Book` model.
 - Show get operations in console.
 
-### Level 1 — Persistence with JDBC (H2)
-- Store books in an H2 database.
-- Use JDBC + connection pool.
-- Learn SQL + transactions.
+### Level 1 — Persistence with JDBC (Postgres)
+- Store books in an Postgres database.
+- Use JDBC to get data.
 
 ### Level 2 — HTTP API with Servlets
 - Serve CRUD via HTTP endpoints.

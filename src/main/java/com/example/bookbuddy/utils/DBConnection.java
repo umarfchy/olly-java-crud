@@ -1,4 +1,4 @@
-package com.example.bookbuddy;
+package com.example.bookbuddy.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

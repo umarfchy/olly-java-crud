@@ -1,35 +1,21 @@
 package com.example.bookbuddy;
 
-import java.sql.Connection;
-import java.util.ArrayList;
+import com.example.bookbuddy.entity.Book;
+import com.example.bookbuddy.utils.Jpa;
+import jakarta.persistence.EntityManager;
+
 import java.util.List;
 
 public class App {
   public static void main(String[] args) {
+    EntityManager em = Jpa.em();
+    List<Book> books = em
+        .createQuery("select b from Book b order by b.id", Book.class)
+        .getResultList();
 
-    try (Connection conn = DBConnection.getConnection()) {
-      System.out.println(conn.getClientInfo().toString());
-      System.out.println("Connection successful;");
-    } catch (Exception e) {
-      System.err.println("Connection failed;");
-      e.printStackTrace();
-    }
+    books.forEach(System.out::println);
 
-    List<Book> books = new ArrayList<>();
-
-    Book book1 = new Book(1, "book-1");
-    Book book2 = new Book(2, "book-2");
-    Book book3 = new Book(3, "book-3");
-
-    books.add(book1);
-    books.add(book2);
-    books.add(book3);
-
-    System.out.println("These are the available books");
-    for (Book book : books) {
-      System.out.println("ID: " + book.getId() + " Name: " + book.getName() + " UUID: " + book.getUUID());
-    }
-
+    em.close();
+    Jpa.close();
   }
-
 }
